@@ -11,7 +11,19 @@ namespace Labo_1
    {
       protected void Page_Load(object sender, EventArgs e)
       {
+         ListeUsers();   
+      }
+      public void ListeUsers()
+      {
+         // Création d'une nouvelle instance de Users (reliée à la table MainDB.Users)
+         Users users = new Users((String)Application["MaindDB"], this);
+         users.SelectAll();
+         users.MakeGridView(PN_ListUsers, "EditUser.aspx");
+      }
 
+      protected void BTN_GotoInscription_Click(object sender, EventArgs e)
+      {
+         Response.Redirect("Inscription.aspx");
       }
    }
 }

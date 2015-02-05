@@ -269,13 +269,22 @@
                 CellAppendChild(row, 1, divObject);
             }
         }
-        function AddSubmitButton(row, caption) {
+        function AddSubmitButton(row, caption, action, CauseValidation) {
             buttonObject = document.createElement("button");
             buttonObject.innerHTML = caption;
+            buttonObject.setAttribute("name", "action");
+            buttonObject.setAttribute("value", action);
             CellAppendChild(row, 1, buttonObject);
-            buttonObject.onclick = function () {
-                return CheckForEmptyInput();
-            };
+            if (CauseValidation) {
+                buttonObject.onclick = function () {
+                    return CheckForEmptyInput();
+                }
+            } else {
+                buttonObject.onclick = function () {
+                    return true;
+                }
+
+            }
         }
         function CheckForEmptyInput() {
             var canSubmit = true;
