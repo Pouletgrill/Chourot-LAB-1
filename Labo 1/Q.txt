@@ -1,0 +1,12 @@
+
+<Button Name = "submit" value = "Add">
+
+
+<Button Name = "submit" value = "Cancel">
+
+*/*/*/*/*/*/*/*/
+Page load
+*/*/*/*/*/*/*/*/
+{
+	string Action = request["Submit"];
+}
