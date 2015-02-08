@@ -329,39 +329,56 @@
         }
         function BuildForm(targetFormID) {
             // création du div qui englobe le formulaire
-            divObject = document.createElement("div");
-            divObject.setAttribute("class", "main");
-            divObject.appendChild(BuildTable(9, 2));
-            document.getElementById(targetFormID).appendChild(divObject);
+
+            document.getElementById(targetFormID).appendChild(BuildTable(11, 2));
             // création des controles
             AddInputText(0, "Prénom:", "Prenom", "ident");
             AddInputText(1, "Nom:", "Nom", "ident");
+
             AddMaskedInputText(2, "Téléphone:", "Telephone", "(###) ###-####");
             AddMaskedInputText(3, "Code postal:", "CodePostal", "C#C #C#");
             AddMaskedInputText(4, "Naissance:", "Naissance", "####-##-##");
             document.getElementById("Naissance").className = " masked datepicker";
+
             AddRadioButtonGroup(5, "Sexe:", "Sexe", "masculin", "féminin");
-            AddRadioButtonGroup(6, "État civil:", "Etatcivil", "célibataire", "marié", "conjoint de fait",
-           "séparé", "veuf");
+            AddRadioButtonGroup(6, "État civil:", "Etatcivil", "célibataire", "marié", "conjoint de fait", "séparé", "veuf");
             // la rangée 7 est volontairement sautée
-            AddSubmitButton(8, "Ajouter...");
-            // installation des "delegates" pour les inputs de classe "ident"
-            var inputObjects = document.getElementsByClassName("ident");
-            for (i = 0; i < inputObjects.length; i++) {
-                inputObjects[i].onkeyup = function () { ConstrainToAlpha(event); };
-                inputObjects[i].onblur = function () { HighLiteEmptyInput(event); };
-            }
-            // installation des "delegates" pour les inputs de classe "masked"
-            var maskedInputs = document.getElementsByClassName("masked");
-            for (i = 0; i < maskedInputs.length; i++) {
-                maskedInputs[i].onkeydown = function () { return Valide_Masque(event); };
-                maskedInputs[i].onkeyup = function () { Post_Check_Masque(event); };
-                maskedInputs[i].onblur = function () {
-                    Post_Check_Masque(event);
-                    HighLiteIncompleteMaskedInput(event)
-                };
-            }
+            AddSubmitButton(8, "Modifier...","edit",true);
+            AddSubmitButton(9, "Effacer...","delete",false);
+            AddSubmitButton(10, "Annuler...","cancel",false);
+            InstallHighLiteEmptyDelegates();
         }
+
+
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+if (!Page.IsPostBack) LoadForm();
+        String action = Request["action"];
+        if (action == "cancel")
+            Response.Redirect("ListerPersonnes.aspx");
+        if (action == "delete")
+            DeleteCurrent();
+        if (action == "edit")
+            UpdateCurrent();
+        }
+
+
+        private void InsertSetValueScript(Panel panel, PersonnesTable personne)
+        {
+String script = "<script>";
+
+        script += BuildSetValueScript("Prenom", personne.Prenom);
+        script += BuildSetValueScript("Nom", personne.Nom);
+        script += BuildSetValueScript("Telephone", personne.Telephone);
+        script += BuildSetValueScript("CodePostal", personne.CodePostal);
+        script += BuildSetValueScript("Naissance", personne.Naissance.ToShortDateString());
+        script += BuildSetRadioBUttonGroupValueScript("Sexe", personne.Sexe.ToString());
+        script += BuildSetRadioBUttonGroupValueScript("Etatcivil", personne.EtatCivil.ToString());
+        script += "</script>";
+panel.Controls.Add(new LiteralControl(script));
+}
     </script>
     <style>
         table, td {

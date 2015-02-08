@@ -6,3 +6,5 @@ C:\Users\201354694\Google Drive\Env.Graph\Labo 1\Labo 1\obj\Debug\Labo 1.dll
 C:\Users\201354694\Google Drive\Env.Graph\Labo 1\Labo 1\obj\Debug\Labo 1.pdb
 C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.csprojResolveAssemblyReference.cache
 C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.dll
+C:\Users\PouletGrill\Documents\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.csprojResolveAssemblyReference.cache
+C:\Users\PouletGrill\Documents\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.dll
