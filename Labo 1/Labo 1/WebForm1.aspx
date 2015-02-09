@@ -376,7 +376,8 @@ String script = "<script>";
         script += BuildSetValueScript("Naissance", personne.Naissance.ToShortDateString());
         script += BuildSetRadioBUttonGroupValueScript("Sexe", personne.Sexe.ToString());
         script += BuildSetRadioBUttonGroupValueScript("Etatcivil", personne.EtatCivil.ToString());
-        script += "</script>";
+        script += "</script>
+    ";
 panel.Controls.Add(new LiteralControl(script));
 }
     </script>
