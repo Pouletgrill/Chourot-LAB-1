@@ -266,27 +266,41 @@ function AddRadioButtonGroup(row, caption, name) {
         CellAppendChild(row, 1, divObject);
     }
 }
-function AddSubmitButton(row, caption, action, CauseValidation) {
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Row: Rangée dans le tableau dans laquelle le bouton sera inséré
+// Caption: Titre du bouton
+// Action: Page vers laquelle la soumission sera dirigée
+// CauseValidation: booléen qui indique si il faut faut lancer la validation ou non
+// confirmMessage: message pour la soumission conditionnelle à la confirmation de l'usager
+function AddSubmitButton(row, caption, action, CauseValidation, confirmMessage) {
     buttonObject = document.createElement("button");
     buttonObject.innerHTML = caption;
     buttonObject.setAttribute("name", "action");
     buttonObject.setAttribute("value", action);
-    buttonObject.className="submitBTN";
+    buttonObject.className = "submitBTN";
     CellAppendChild(row, 1, buttonObject);
-    if (CauseValidation) { 
-        buttonObject.onclick = function () {
-            return CheckForEmptyInput();
+    if (CauseValidation) {
+        buttonObject.onclick = function () { return CheckForEmptyInput(); }
+    }
+    else {
+        if (confirmMessage != null) {
+            buttonObject.onclick = function () { return confirm(confirmMessage); }
         }
-    } else {
-        buttonObject.onclick = function () {
-            return true;
+        else {
+            buttonObject.onclick = function () { return true; }
         }
-
     }
 }
+//exemple d'utilisation:
+
+//AddSubmitButton(8, "Modifier...","edit",true);
+//AddSubmitButton(9, "Effacer...","delete",false,"Êtes-vous sûr de vouloir effacer cet enregistrement?");
+//AddSubmitButton(10, "Annuler...","cancel",false);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function CheckForEmptyInput() {
-    
+
     var canSubmit = true;
     var inputObjects = document.getElementsByClassName("CantBeEmpty");
     for (i = 0; i < inputObjects.length; i++) {
@@ -368,8 +382,8 @@ function SetValue(input_ID, value) {
 
 function SetRadioButtonGroupValue(rbg_Name, value) {
     var buttons = document.getElementsByName(rbg_Name);
-   
+
     for (b = 0; b < buttons.length; b++) {
-        buttons[b].checked = (value == b);       
+        buttons[b].checked = (value == b);
     }
 }

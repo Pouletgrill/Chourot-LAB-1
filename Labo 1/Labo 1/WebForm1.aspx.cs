@@ -11,7 +11,39 @@ namespace Labo_1
    {
       protected void Page_Load(object sender, EventArgs e)
       {
+         if (!Page.IsPostBack) LoadForm();
+         String action = Request["action"];
+         if (action == "cancel")
+            Response.Redirect("ListerPersonnes.aspx");
+         if (action == "delete")
+            DeleteCurrent();
+         if (action == "edit")
+            UpdateCurrent();
+      }
 
+      private string BuildSetValueScript(String input, String value)
+      {
+         return "SetValue('" + input + "', '" + value + "'); ";
+      }
+
+      private string BuildSetRadioBUttonGroupValueScript(String RBG_Name, String value)
+      {
+         return "SetRadioButtonGroupValue('" + RBG_Name + "', '" + value + "'); ";
+      }
+
+      private void InsertSetValueScript(Panel panel, PersonnesTable personne)
+      {
+         String script = "<script>";
+
+         script += BuildSetValueScript("Prenom", personne.Prenom);
+         script += BuildSetValueScript("Nom", personne.Nom);
+         script += BuildSetValueScript("Telephone", personne.Telephone);
+         script += BuildSetValueScript("CodePostal", personne.CodePostal);
+         script += BuildSetValueScript("Naissance", personne.Naissance.ToShortDateString());
+         script += BuildSetRadioBUttonGroupValueScript("Sexe", personne.Sexe.ToString());
+         script += BuildSetRadioBUttonGroupValueScript("Etatcivil", personne.EtatCivil.ToString());
+         script += "</script>";
+         panel.Controls.Add(new LiteralControl(script));
       }
    }
 }
