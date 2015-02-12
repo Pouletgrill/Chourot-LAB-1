@@ -16,9 +16,9 @@ namespace Labo_1
       public void ListeUsers()
       {
          // Création d'une nouvelle instance de Users (reliée à la table MainDB.Users)
-         Users users = new Users((String)Application["MaindDB"], this);
+         PersonnesTable users = new PersonnesTable((String)Application["MaindDB"], this);
          users.SelectAll();
-         users.MakeGridView(PN_ListUsers, "EditUser.aspx");
+         //users.MakeGridView(PN_ListUsers, "EditUser.aspx");
       }
 
       protected void BTN_GotoInscription_Click(object sender, EventArgs e)

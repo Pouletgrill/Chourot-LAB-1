@@ -330,7 +330,7 @@
         function BuildForm(targetFormID) {
             // création du div qui englobe le formulaire
 
-            document.getElementById(targetFormID).appendChild(BuildTable(11, 2));
+            document.getElementById(targetFormID).appendChild(BuildTable(12, 2));//changé pour 12
             // création des controles
             AddInputText(0, "Prénom:", "Prenom", "ident");
             AddInputText(1, "Nom:", "Nom", "ident");
@@ -343,9 +343,10 @@
             AddRadioButtonGroup(5, "Sexe:", "Sexe", "masculin", "féminin");
             AddRadioButtonGroup(6, "État civil:", "Etatcivil", "célibataire", "marié", "conjoint de fait", "séparé", "veuf");
             // la rangée 7 est volontairement sautée
-            AddSubmitButton(8, "Modifier...","edit",true);
-            AddSubmitButton(9, "Effacer...","delete",false);
-            AddSubmitButton(10, "Annuler...","cancel",false);
+            AddSubmitButton(8, "Soumettre...", "add", true);//ajouter Soumettre
+            AddSubmitButton(9, "Modifier...","edit",true);
+            AddSubmitButton(10, "Effacer...","delete",false);
+            AddSubmitButton(11, "Annuler...","cancel",false);
             InstallHighLiteEmptyDelegates();
         }
         

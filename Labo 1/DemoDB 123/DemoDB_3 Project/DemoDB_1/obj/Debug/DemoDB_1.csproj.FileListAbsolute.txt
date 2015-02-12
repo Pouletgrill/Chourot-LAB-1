@@ -22,3 +22,9 @@ C:\Users\201354694\Google Drive\Env.Graph\DemoDB 123\DemoDB_3 Project\DemoDB_1\b
 C:\Users\201354694\Google Drive\Env.Graph\DemoDB 123\DemoDB_3 Project\DemoDB_1\obj\Debug\DemoDB_1.csprojResolveAssemblyReference.cache
 C:\Users\201354694\Google Drive\Env.Graph\DemoDB 123\DemoDB_3 Project\DemoDB_1\obj\Debug\DemoDB_1.dll
 C:\Users\201354694\Google Drive\Env.Graph\DemoDB 123\DemoDB_3 Project\DemoDB_1\obj\Debug\DemoDB_1.pdb
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\DemoDB 123\DemoDB_3 Project\DemoDB_1\bin\DemoDB_1.dll.config
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\DemoDB 123\DemoDB_3 Project\DemoDB_1\bin\DemoDB_1.dll
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\DemoDB 123\DemoDB_3 Project\DemoDB_1\bin\DemoDB_1.pdb
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\DemoDB 123\DemoDB_3 Project\DemoDB_1\obj\Debug\DemoDB_1.csprojResolveAssemblyReference.cache
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\DemoDB 123\DemoDB_3 Project\DemoDB_1\obj\Debug\DemoDB_1.dll
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\DemoDB 123\DemoDB_3 Project\DemoDB_1\obj\Debug\DemoDB_1.pdb

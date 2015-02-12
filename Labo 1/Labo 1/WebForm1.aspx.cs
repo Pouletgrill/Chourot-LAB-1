@@ -19,6 +19,25 @@ namespace Labo_1
             DeleteCurrent();
          if (action == "edit")
             UpdateCurrent();
+         if (action == "add")
+            AddCurrent();
+      }
+
+      private void LoadForm()
+      {
+
+      }
+      private void DeleteCurrent()
+      {
+
+      }
+      private void UpdateCurrent()
+      {
+
+      }
+      private void AddCurrent()
+      {
+
       }
 
       private string BuildSetValueScript(String input, String value)

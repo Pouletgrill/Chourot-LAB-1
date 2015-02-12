@@ -10,3 +10,6 @@ Page load
 {
 	string Action = request["Submit"];
 }
+
+formulaire 
+file upload doit etre a post

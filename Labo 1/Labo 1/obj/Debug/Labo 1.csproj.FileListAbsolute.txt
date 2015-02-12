@@ -8,3 +8,7 @@ C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.c
 C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.dll
 C:\Users\PouletGrill\Documents\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.csprojResolveAssemblyReference.cache
 C:\Users\PouletGrill\Documents\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.dll
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\bin\Labo 1.dll.config
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\bin\Labo 1.dll
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\bin\Labo 1.pdb
+C:\Users\201354694\Desktop\GitHub\Chourot-LAB-1\Labo 1\Labo 1\obj\Debug\Labo 1.pdb
