@@ -24,8 +24,8 @@ namespace Labo_1
       }
 
       private void LoadForm()
-      {
-
+      {  
+         
       }
       private void DeleteCurrent()
       {

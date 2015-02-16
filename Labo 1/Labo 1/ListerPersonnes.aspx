@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="Labo_1.CreateUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListerPersonnes.aspx.cs" Inherits="Labo_1.ListerPersonnes" %>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Create Users</h1><hr />
-            :(..
+        <h1>Lister Personne</h1><hr />
+
     </div>
     </form>
 </body>

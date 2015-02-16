@@ -73,6 +73,7 @@
     <Content Include="CreateUser.aspx" />
     <Content Include="EditUser.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="ListerPersonnes.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -93,6 +94,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListerPersonnes.aspx.cs">
+      <DependentUpon>ListerPersonnes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListerPersonnes.aspx.designer.cs">
+      <DependentUpon>ListerPersonnes.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonnesTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
