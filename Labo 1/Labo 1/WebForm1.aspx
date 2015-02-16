@@ -330,7 +330,7 @@
         function BuildForm(targetFormID) {
             // création du div qui englobe le formulaire
 
-            document.getElementById(targetFormID).appendChild(BuildTable(12, 2));//changé pour 12
+            document.getElementById(targetFormID).appendChild(BuildTable(13, 2));//changé pour 12
             // création des controles
             AddInputText(0, "Prénom:", "Prenom", "ident");
             AddInputText(1, "Nom:", "Nom", "ident");
